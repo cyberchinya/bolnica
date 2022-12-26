@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->string('desk')->nullable();
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->text('image')->nullable();
             $table->boolean('is_published')->default(false);
             $table->timestamps();

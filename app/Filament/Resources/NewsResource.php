@@ -49,8 +49,8 @@ class NewsResource extends Resource
                          ->afterStateUpdated(function (Closure $set, $state) {
                              $set('slug', Str::slug($state));
                          })->required(),
-/*                     TextInput::make('desk')->required()
-                     ->label('Заголовок'),*/
+                     TextInput::make('desk')->required()
+                         ->label('Заголовок'),
                      TinyEditor::make('content')->required()
                      ->label('Описание'),
                      Toggle::make('is_published')
