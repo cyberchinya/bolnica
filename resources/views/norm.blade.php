@@ -69,7 +69,7 @@
                 <ul>
 
                     <li><a class="nav-link" href="/">Главная</a></li>
-                    <li><a class="nav-link active" href="{{ route('news') }}">Новости</a></li>
+                    <li><a class="nav-link" href="{{ route('news') }}">Новости</a></li>
                     <li class="dropdown"><a href="#"><span>Услуги</span> <i class="bi bi-megaphone"></i></a>
                         <ul>
                             <li><a href="#">Тарифы на платные медицинские услуги</a></li>
@@ -82,7 +82,7 @@
                             <li><a href="{{ route('structura') }}">Структура клиники</a></li>
                             <li><a href="{{ route('manager') }}">Список заведующих отделениями</a></li>
                             <li><a href="{{ route('vakancy') }}">Вакансии</a></li>
-                            <li><a href="{{ route('norm') }}">Нормативно-правовые документы</a></li>
+                            <li><a class="nav-link active" href="{{ route('norm') }}">Нормативно-правовые документы</a></li>
                             <li><a href="#">Лист записи единого гос реестра</a></li>
                             <li><a href="#">Охрана труда</a></li>
                             <li><a href="#">Лицензии</a></li>
