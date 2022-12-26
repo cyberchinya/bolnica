@@ -25,6 +25,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class NewsResource extends Resource
 {
@@ -43,12 +44,15 @@ class NewsResource extends Resource
             ->schema([
                  Card::make()->schema([
                      TextInput::make('title')
+                         ->label('Название')
                          ->reactive()
                          ->afterStateUpdated(function (Closure $set, $state) {
                              $set('slug', Str::slug($state));
                          })->required(),
-                     TextInput::make('desk')->required(),
-                     RichEditor::make('content')->required(),
+/*                     TextInput::make('desk')->required()
+                     ->label('Заголовок'),*/
+                     TinyEditor::make('content')->required()
+                     ->label('Описание'),
                      Toggle::make('is_published')
                 ])
             ]);
@@ -58,10 +62,10 @@ class NewsResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('id')->sortable()->searchable(),
-                TextColumn::make('title')->limit(20)->sortable()->searchable(),
-                TextColumn::make('desk')->limit(50)->sortable()->searchable(),
-                BooleanColumn::make('is_published')->searchable(),
+                TextColumn::make('id')->sortable()->searchable()->label('номер'),
+                TextColumn::make('title')->limit(20)->sortable()->searchable()->label('заголовок'),
+                TextColumn::make('desk')->limit(1000)->sortable()->searchable()->label('описание'),
+                BooleanColumn::make('is_published')->searchable()->label('опубликовано'),
             ])
             ->filters([
                 //
