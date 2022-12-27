@@ -8,6 +8,7 @@ use App\Models\Norm;
 use Closure;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -45,7 +46,8 @@ class NormResource extends Resource
                             $set('slug', Str::slug($state));
                         }),
                     TextInput::make('description')->label('название'),
-                    TinyEditor::make('content')->required()->label('описание'),
+                    TinyEditor::make('content')->required()->label('описание')
+                    ->showMenuBar(),
                     Toggle::make('is_published')->label('опубликовать?')
                 ])
             ]);
