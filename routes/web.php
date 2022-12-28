@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminBolnController;
 /*use App\Http\Controllers\DoctorController;*/
+
+use App\Http\Controllers\GosreestrController;
 use App\Http\Controllers\KorupciaController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\NewsController;
@@ -39,6 +41,7 @@ Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/vopros', [VoprosController::class, 'index'])->name('vopros');
 Route::get('/personal', [PersonalController::class, 'index'])->name('personal');
 Route::get('/norm',[NormController::class, 'index'])->name('norm');
+Route::get('/gosreestr', [GosreestrController::class, 'index'])->name('gosreestr');
 /*Route::get('/doctor', [DoctorController::class, 'index'])->name('doctor');*/
 /*Route::post('/doctor', [DoctorController::class, 'store'])->name('doctor.store');*/
 Route::get('/faq', function () {

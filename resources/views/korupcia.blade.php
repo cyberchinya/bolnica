@@ -78,12 +78,12 @@
                         </ul>
                     <li class="dropdown"><a href="#"><span>О больнице</span> <i class="bi bi-justify-left"></i></a>
                         <ul>
-                            <li><a href="#">Администрация</a></li>
-                            <li><a href="#">Структура клиники</a></li>
-                            <li><a href="#">Список заведующих отделениями</a></li>
+                            <li><a href="{{ route('adminiboln') }}">Администрация</a></li>
+                            <li><a href="{{ route('structura') }}">Структура клиники</a></li>
+                            <li><a href="{{ route('manager') }}">Список заведующих отделениями</a></li>
                             <li><a href="{{ route('vakancy') }}">Вакансии</a></li>
                             <li><a href="{{ route('norm') }}">Нормативно-правовые документы</a></li>
-                            <li><a href="#">Лист записи единого гос реестра</a></li>
+                            <li><a href="{{ route('gosreestr') }}">Лист записи единого гос реестра</a></li>
                             <li><a href="#">Охрана труда</a></li>
                             <li><a href="#">Лицензии</a></li>
                             <li><a href="#">О медицинских работниках медицинской организации</a></li>
