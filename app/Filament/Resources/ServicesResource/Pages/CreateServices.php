@@ -8,5 +8,6 @@ use Filament\Resources\Pages\CreateRecord;
 
 class CreateServices extends CreateRecord
 {
+    protected static ?string $title = 'Тарифы на платные услуги';
     protected static string $resource = ServicesResource::class;
 }

@@ -8,6 +8,8 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditVakancy extends EditRecord
 {
+    protected static ?string $title = 'Редактировать вакансии';
+
     protected static string $resource = VakancyResource::class;
 
     protected function getActions(): array

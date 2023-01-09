@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('desk');
+            $table->string('desk')->nullable();
             $table->text('content');
             $table->text('image')->nullable();
             $table->boolean('is_published')->default(false);

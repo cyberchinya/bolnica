@@ -22,6 +22,7 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ServicesResource extends Resource
 {
@@ -31,7 +32,7 @@ class ServicesResource extends Resource
 
     protected static function getNavigationLabel(): string
     {
-        return __('Услуги');
+        return __('Тарифы на платные услуги');
     }
 
     public static function form(Form $form): Form
@@ -40,14 +41,15 @@ class ServicesResource extends Resource
             ->schema([
                 Card::make()->schema([
                     TextInput::make('title')
+                        ->label('заголовок')
                         ->reactive()
                         ->afterStateUpdated(function (Closure $set, $state) {
                             $set('slug', Str::slug($state));
                         })->required(),
-                    TextInput::make('desk'),
-                    FileUpload::make('image')->image(),
-                    RichEditor::make('content')->required(),
-                    Toggle::make('is_published')
+                    TextInput::make('desk')->label('описание'),
+                    FileUpload::make('image')->image()->label('файл'),
+                    TinyEditor::make('content')->required()->label('содержание'),
+                    Toggle::make('is_published')->label('видимость')
                 ])
             ]);
     }
@@ -56,11 +58,11 @@ class ServicesResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('id')->sortable()->searchable(),
-                TextColumn::make('title')->limit(20)->sortable()->searchable(),
-                TextColumn::make('desk')->limit(50)->sortable()->searchable(),
-                ImageColumn::make('image'),
-                BooleanColumn::make('is_published')->searchable(),
+                TextColumn::make('id')->sortable()->searchable()->label('номер'),
+                TextColumn::make('title')->limit(20)->label('заголовок')->sortable()->searchable(),
+                TextColumn::make('desk')->limit(50)->label('описание')->sortable()->searchable(),
+                ImageColumn::make('image')->label('файл'),
+                BooleanColumn::make('is_published')->searchable()->label('видимость'),
             ])
             ->filters([
                 //

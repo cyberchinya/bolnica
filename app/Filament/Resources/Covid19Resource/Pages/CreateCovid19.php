@@ -8,5 +8,7 @@ use Filament\Resources\Pages\CreateRecord;
 
 class CreateCovid19 extends CreateRecord
 {
+    protected static ?string $title = 'Всё про корону';
+
     protected static string $resource = Covid19Resource::class;
 }

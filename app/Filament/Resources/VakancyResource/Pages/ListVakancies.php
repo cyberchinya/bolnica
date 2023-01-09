@@ -8,6 +8,8 @@ use Filament\Resources\Pages\ListRecords;
 
 class ListVakancies extends ListRecords
 {
+    protected static ?string $title = 'Вакансии';
+
     protected static string $resource = VakancyResource::class;
 
     protected function getActions(): array

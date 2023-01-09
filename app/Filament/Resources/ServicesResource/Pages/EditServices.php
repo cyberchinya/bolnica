@@ -8,6 +8,8 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditServices extends EditRecord
 {
+    protected static ?string $title = 'Тарифы на платные услуги';
+
     protected static string $resource = ServicesResource::class;
 
     protected function getActions(): array

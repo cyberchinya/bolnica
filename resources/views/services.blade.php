@@ -69,14 +69,14 @@
                 <ul>
 
                     <li><a class="nav-link" href="/">Главная</a></li>
-                    <li><a class="nav-link active" href="{{ route('news') }}">Новости</a></li>
+                    <li><a class="nav-link" href="{{ route('news') }}">Новости</a></li>
                     <li class="dropdown"><span>Услуги</span> <i class="bi bi-megaphone"></i>
                         <ul>
-                            <li><a href="{{ route('services') }}">Тарифы на платные медицинские услуги</a></li>
+                            <li><a class="nav-link active" href="{{ route('services') }}">Тарифы на платные медицинские услуги</a></li>
                             <li><a href="#">Перечень специалистов оказывающих платные услуги</a></li>
                             <li><a href="#">Порядок оказания платных услуг</a></li>
                         </ul>
-                    <li class="dropdown"><a href="#"><span>О больнице</span> <i class="bi bi-justify-left"></i></a>
+                    <li class="dropdown"><span>О больнице</span><i class="bi bi-justify-left"></i>
                         <ul>
                             <li><a href="{{ route('adminiboln') }}">Администрация</a></li>
                             <li><a href="{{ route('structura') }}">Структура клиники</a></li>
@@ -122,17 +122,17 @@
         </div>
     </section>
     <div class="section-title">
-        <h1 class="container-fluid text-center">Новости</h1>
+        <h2 class="container-fluid text-center">Тарифы на платные медицинские услуги</h2>
     </div>
-    <div style="padding: 2rem; display: flex;flex-direction: column; justify-content: center;align-items: center;">
-        @foreach($news as $list)
+    <div style="padding: 1rem; display: flex;flex-direction: column; justify-content: center;align-items: center;">
+        @foreach($services as $list)
             <article>
                 <h2>{{ $list->title }}</h2>
-                <span style="font-weight: bold">{{--{{ $list->created_at->format('d.m.Y') }}--}}</span>
+                <span style="font-weight: bold"></span>
                 <div>{{ $list->desk }}</div>
                 <div style="display: flex; ">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                   </div>
+                    </div>
                     <div style="padding: 2rem;">{!! $list->content !!}</div>
                 </div>
             </article>

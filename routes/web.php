@@ -9,6 +9,7 @@ use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NormController;
 use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\StructuraController;
 use App\Http\Controllers\ThanksController;
 use App\Http\Controllers\VakancyController;
@@ -30,7 +31,6 @@ Route::get('/', function () {
 })->name('home');
 // конец у баннеров
 
-
 Route::get('/thanks', [ThanksController::class, 'index'])->name('thanks');
 Route::post('/thanks', [ThanksController::class, 'store'])->name('thanks.store');
 Route::get('/vakancy', [VakancyController::class, 'index'])->name('vakancy');
@@ -42,8 +42,8 @@ Route::get('/vopros', [VoprosController::class, 'index'])->name('vopros');
 Route::get('/personal', [PersonalController::class, 'index'])->name('personal');
 Route::get('/norm',[NormController::class, 'index'])->name('norm');
 Route::get('/gosreestr', [GosreestrController::class, 'index'])->name('gosreestr');
-/*Route::get('/doctor', [DoctorController::class, 'index'])->name('doctor');*/
-/*Route::post('/doctor', [DoctorController::class, 'store'])->name('doctor.store');*/
+Route::get('/services', [ServicesController::class, 'index'])->name('services');
+
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');

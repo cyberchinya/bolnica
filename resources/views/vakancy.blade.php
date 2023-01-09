@@ -70,9 +70,9 @@
 
                     <li><a class="nav-link" href="/">Главная</a></li>
                     <li><a class="nav-link active" href="{{ route('news') }}">Новости</a></li>
-                    <li class="dropdown"><a href="#"><span>Услуги</span> <i class="bi bi-megaphone"></i></a>
+                    <li class="dropdown"><span>Услуги</span> <i class="bi bi-megaphone"></i>
                         <ul>
-                            <li><a href="#">Тарифы на платные медицинские услуги</a></li>
+                            <li><a href="{{ route('services') }}">Тарифы на платные медицинские услуги</a></li>
                             <li><a href="#">Перечень специалистов оказывающих платные услуги</a></li>
                             <li><a href="#">Порядок оказания платных услуг</a></li>
                         </ul>

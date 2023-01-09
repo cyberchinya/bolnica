@@ -8,6 +8,8 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditAdminBoln extends EditRecord
 {
+    protected static ?string $title = 'Редактирование администрации';
+
     protected static string $resource = AdminBolnResource::class;
 
     protected function getActions(): array

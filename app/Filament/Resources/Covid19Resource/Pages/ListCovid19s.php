@@ -8,6 +8,8 @@ use Filament\Resources\Pages\ListRecords;
 
 class ListCovid19s extends ListRecords
 {
+    protected static ?string $title = 'Список';
+
     protected static string $resource = Covid19Resource::class;
 
     protected function getActions(): array

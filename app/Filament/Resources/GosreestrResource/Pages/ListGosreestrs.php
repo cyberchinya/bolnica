@@ -8,6 +8,7 @@ use Filament\Resources\Pages\ListRecords;
 
 class ListGosreestrs extends ListRecords
 {
+
     protected static string $resource = GosreestrResource::class;
 
     protected function getActions(): array

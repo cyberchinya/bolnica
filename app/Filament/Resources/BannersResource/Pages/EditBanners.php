@@ -8,6 +8,8 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditBanners extends EditRecord
 {
+    protected static ?string $title = 'Редактирование баннеров';
+
     protected static string $resource = BannersResource::class;
 
     protected function getActions(): array

@@ -8,5 +8,7 @@ use Filament\Resources\Pages\CreateRecord;
 
 class CreateAdminBoln extends CreateRecord
 {
+    protected static ?string $title = 'Создание администрации больницы';
+
     protected static string $resource = AdminBolnResource::class;
 }

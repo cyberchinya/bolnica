@@ -8,6 +8,8 @@ use Filament\Resources\Pages\ListRecords;
 
 class ListAdminBolns extends ListRecords
 {
+    protected static ?string $title = 'Список администрации больницы';
+
     protected static string $resource = AdminBolnResource::class;
 
     protected function getActions(): array

@@ -45,10 +45,9 @@ class NormResource extends Resource
                         ->afterStateUpdated(function (Closure $set, $state) {
                             $set('slug', Str::slug($state));
                         }),
-                    TextInput::make('description')->label('название'),
-                    TinyEditor::make('content')->required()->label('описание')
-                    ->showMenuBar(),
-                    Toggle::make('is_published')->label('опубликовать?')
+                    TextInput::make('description')->label('название')->required(),
+                    TinyEditor::make('content')->required()->label('описание'),
+                    Toggle::make('is_published')->label('видимость')
                 ])
             ]);
     }
@@ -58,9 +57,9 @@ class NormResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id')->sortable()->searchable()->label('номер'),
-                TextColumn::make('title')->limit(20)->sortable()->searchable()->label('заголовок'),
+                /*TextColumn::make('title')->limit(20)->sortable()->searchable()->label('заголовок'),*/
                 TextColumn::make('content')->limit(450)->sortable()->searchable()->label('описание'),
-                BooleanColumn::make('is_published')->searchable()->label('опубликовано'),
+                BooleanColumn::make('is_published')->searchable()->label('видимость'),
             ])
             ->filters([
                 //

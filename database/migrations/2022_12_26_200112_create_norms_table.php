@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('norms', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->text('description')->default(Carbon::now());
             $table->text('content');
             $table->boolean('is_published')->default(false);
