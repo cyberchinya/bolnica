@@ -73,6 +73,7 @@
                             <li><a href="{{ route('adminiboln') }}">Администрация</a></li>
                             <li><a href="{{ route('structura') }}">Структура клиники</a></li>
                             <li><a href="{{ route('manager') }}">Список заведующих отделениями</a></li>
+                            <li><a href="">Наши врачи</a></li>
                             <li><a href="{{ route('vakancy') }}">Вакансии</a></li>
                             <li><a href="{{ route('norm') }}">Нормативно-правовые документы</a></li>
                             <li><a href="{{ route('gosreestr') }}">Лист записи единого гос реестра</a></li>
