@@ -48,20 +48,15 @@
         </div>
     </div>
     <!-- ======= конец верхний самый хедер======= -->
+    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-
-            <div class="container mx-lg-5">
-                <img src="{{ asset('assets/img/herb3.png') }}" alt="герб Удмуртии" title="герб Удмуртии"
-                     class="logo me-auto" width="50px" height="50px">
-                <img src="{{ asset('assets/img/gerb3.jpg') }}" alt="герб Сюмси" title="герб Сюмси" class="logo me-auto"
-                     width="70px" height="50px">
-
+            <div class="container">
+                <img src="{{ asset('assets/img/herb3.png') }}" alt="герб Удмуртии" title="герб Удмуртии" class="logo me-auto" width="50px" height="50px">
             </div>
-
-            <div class="container col-md-3">
+            <div class="container col-lg-4">
                 <div class="logos">
-                    <img src="{{ asset('assets/img/logo.png') }}" class="logo me-auto" width="250px" height="50px">
+                    <img src="{{ asset('assets/img/logo.png') }}" class="logo me-auto"  width="250px" height="50px">
                 </div>
             </div>
 
@@ -70,13 +65,13 @@
 
                     <li><a class="nav-link" href="/">Главная</a></li>
                     <li><a class="nav-link" href="{{ route('news') }}">Новости</a></li>
-                    <li class="dropdown"><span>Услуги</span> <i class="bi bi-megaphone"></i>
+                    <li class="dropdown"><span>Услуги</span>
                         <ul>
                             <li><a href="{{ route('services') }}">Тарифы на платные медицинские услуги</a></li>
                             <li><a href="#">Перечень специалистов оказывающих платные услуги</a></li>
                             <li><a href="#">Порядок оказания платных услуг</a></li>
                         </ul>
-                    <li class="dropdown"><a href="#"><span>О больнице</span> <i class="bi bi-justify-left"></i></a>
+                    <li class="dropdown"><a href="#"><span>О больнице</span></a>
                         <ul>
                             <li><a href="{{ route('adminiboln') }}">Администрация</a></li>
                             <li><a href="{{ route('structura') }}">Структура клиники</a></li>
@@ -94,7 +89,7 @@
                             <li><a href="#">Сведения о государственной регистрации и об учредителе</a></li>
                             <li><a href="#">Учредительные документы</a></li>
                         </ul>
-                    <li class="dropdown"><a href="#"><span>Пациентам</span> <i class="bi bi-lightbulb"></i></a>
+                    <li class="dropdown"><a href="#"><span>Пациентам</span></a>
                         <ul>
                             <li><a href="#">Информация</a></li>
                             <li><a href="#">Обратная связь</a></li>

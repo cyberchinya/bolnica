@@ -45,18 +45,15 @@
         </div>
     </div>
     <!-- ======= конец верхний самый хедер======= -->
+    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-
-            <div class="container mx-lg-5">
+            <div class="container">
                 <img src="{{ asset('assets/img/herb3.png') }}" alt="герб Удмуртии" title="герб Удмуртии" class="logo me-auto" width="50px" height="50px">
-                <img src="{{ asset('assets/img/gerb3.jpg') }}" alt="герб Сюмси" title="герб Сюмси" class="logo me-auto" width="70px" height="50px">
-
             </div>
-
-            <div class="container col-md-3">
+            <div class="container col-lg-4">
                 <div class="logos">
-                    <img src="{{ asset('assets/img/logo.png') }}" class="logo me-auto" width="250px" height="50px">
+                    <img src="{{ asset('assets/img/logo.png') }}" class="logo me-auto"  width="250px" height="50px">
                 </div>
             </div>
 
