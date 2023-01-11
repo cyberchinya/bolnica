@@ -8,6 +8,7 @@ use App\Http\Controllers\KorupciaController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NormController;
+use App\Http\Controllers\OurDoctorController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\StructuraController;
@@ -43,6 +44,7 @@ Route::get('/personal', [PersonalController::class, 'index'])->name('personal');
 Route::get('/norm',[NormController::class, 'index'])->name('norm');
 Route::get('/gosreestr', [GosreestrController::class, 'index'])->name('gosreestr');
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
+Route::get('/ourdoctor', [OurDoctorController::class, 'index'])->name('ourdoctor');
 
 Route::get('/faq', function () {
     return view('faq');

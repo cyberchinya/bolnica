@@ -30,7 +30,7 @@ class StructureResource extends Resource
 
     protected static function getNavigationLabel(): string
     {
-        return __('Структура клиники');
+        return __('Структура больницы');
     }
 
     public static function form(Form $form): Form

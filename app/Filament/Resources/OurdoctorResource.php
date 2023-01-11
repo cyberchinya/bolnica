@@ -2,14 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServicesResource\Pages;
-use App\Filament\Resources\ServicesResource\RelationManagers;
-use App\Models\Services;
+use App\Filament\Resources\OurdoctorResource\Pages;
+use App\Filament\Resources\OurdoctorResource\RelationManagers;
+use App\Models\Ourdoctor;
 use Closure;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Form;
@@ -24,15 +23,15 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
-class ServicesResource extends Resource
+class OurdoctorResource extends Resource
 {
-    protected static ?string $model = Services::class;
+    protected static ?string $model = Ourdoctor::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-cake';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
     protected static function getNavigationLabel(): string
     {
-        return __('Тарифы на платные услуги');
+        return __('Наши врачи');
     }
 
     public static function form(Form $form): Form
@@ -41,14 +40,15 @@ class ServicesResource extends Resource
             ->schema([
                 Card::make()->schema([
                     TextInput::make('title')
-                        ->label('заголовок')
-                        ->reactive()
+                    ->label('заголовок')
+                    ->reactive()
                         ->afterStateUpdated(function (Closure $set, $state) {
                             $set('slug', Str::slug($state));
                         })->required(),
-                    TextInput::make('desk')->label('название'),
-                    FileUpload::make('image')->image()->label('файл'),
-                    TinyEditor::make('content')->required()->label('описание'),
+                    TextInput::make('desk')->label('специальность'),
+                    FileUpload::make('image')->image()->label('фото'),
+                    FileUpload::make('document')->acceptedFileTypes(['storage/pdf'])->label('загрузить файл'),
+                    TinyEditor::make('content')->required()->label('о враче'),
                     Toggle::make('is_published')->label('видимость')
                 ])
             ]);
@@ -59,9 +59,9 @@ class ServicesResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id')->sortable()->searchable()->label('номер'),
-                TextColumn::make('title')->limit(20)->label('заголовок')->sortable()->searchable(),
+                TextColumn::make('title')->limit(20)->label('специальность')->sortable()->searchable(),
                 TextColumn::make('desk')->limit(50)->label('описание')->sortable()->searchable(),
-                ImageColumn::make('image')->label('файл'),
+                ImageColumn::make('image')->label('фото'),
                 BooleanColumn::make('is_published')->searchable()->label('видимость'),
             ])
             ->filters([
@@ -85,9 +85,9 @@ class ServicesResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateServices::route('/create'),
-            'edit' => Pages\EditServices::route('/{record}/edit'),
+            'index' => Pages\ListOurdoctors::route('/'),
+            'create' => Pages\CreateOurdoctor::route('/create'),
+            'edit' => Pages\EditOurdoctor::route('/{record}/edit'),
         ];
     }
 }

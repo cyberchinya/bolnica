@@ -71,15 +71,15 @@
                             <li><a href="#">Перечень специалистов оказывающих платные услуги</a></li>
                             <li><a href="#">Порядок оказания платных услуг</a></li>
                         </ul>
-                    <li class="dropdown"><a href="#"><span>О больнице</span></a>
+                    <li class="dropdown"><a class="nav-link active" "#"><span>О больнице</span></a>
                         <ul>
                             <li><a href="{{ route('adminiboln') }}">Администрация</a></li>
                             <li><a href="{{ route('structura') }}">Структура клиники</a></li>
                             <li><a href="{{ route('manager') }}">Список заведующих отделениями</a></li>
-                            <li><a href="">Наши врачи</a></li>
+                            <li><a href="{{ route('ourdoctor') }}">Наши врачи</a></li>
                             <li><a href="{{ route('vakancy') }}">Вакансии</a></li>
                             <li><a href="{{ route('norm') }}">Нормативно-правовые документы</a></li>
-                            <li><a <a class="nav-link active" href="{{ route('gosreestr') }}">Лист записи единого гос реестра</a></li>
+                            <li><a href="{{ route('gosreestr') }}">Лист записи единого гос реестра</a></li>
                             <li><a href="#">Охрана труда</a></li>
                             <li><a href="#">Лицензии</a></li>
                             <li><a href="#">О медицинских работниках медицинской организации</a></li>

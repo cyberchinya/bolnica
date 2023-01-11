@@ -46,7 +46,7 @@ class VakancyResource extends Resource
                         }),*/
                     /*TextInput::make('desk')->label('Описание'),*/
                     TinyEditor::make('content')->required()->label('Контент'),
-                    Toggle::make('is_published')->label('Опубликовать')
+                    Toggle::make('is_published')->label('видимость')
                 ])
             ]);
     }
@@ -58,7 +58,7 @@ class VakancyResource extends Resource
                 TextColumn::make('id')->sortable()->searchable()->label('номер'),
                 TextColumn::make('title')->limit(20)->sortable()->searchable()->label('вакансия'),
                 TextColumn::make('desk')->limit(50)->sortable()->searchable()->label('описание'),
-                BooleanColumn::make('is_published')->searchable()->label('опубликовать'),
+                BooleanColumn::make('is_published')->searchable()->label('видимость'),
             ])
             ->filters([
                 //
