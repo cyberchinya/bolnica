@@ -16,6 +16,7 @@ use App\Http\Controllers\ThanksController;
 use App\Http\Controllers\VakancyController;
 use App\Http\Controllers\VoprosController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 // баннеры
 Route::get('/', function () {
@@ -45,6 +46,7 @@ Route::get('/norm',[NormController::class, 'index'])->name('norm');
 Route::get('/gosreestr', [GosreestrController::class, 'index'])->name('gosreestr');
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
 Route::get('/ourdoctor', [OurDoctorController::class, 'index'])->name('ourdoctor');
+
 
 Route::get('/faq', function () {
     return view('faq');

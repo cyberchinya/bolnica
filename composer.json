@@ -15,6 +15,7 @@
         "livewire/livewire": "^2.10",
         "mohamedsabil83/filament-forms-tinyeditor": "^1.6",
         "ryangjchandler/filament-profile": "^0.2.2",
+        "spatie/laravel-honeypot": "^4.3",
         "spatie/laravel-permission": "^5.5"
     },
     "require-dev": {
