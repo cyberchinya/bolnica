@@ -31,7 +31,7 @@
 
 <body>
 <!-- COOKIE -->
-<style>.mcook{z-index:1000;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;background-color: #eee8e8;display:flex;align-items:center;opacity:0;visibility:hidden;transform:translatey(100%);position:fixed;bottom:0;left:0;right:0;transition:.2s}  .mcook.mvisible{opacity:1;visibility:visible;transform:none}  .mcook__container{max-width:1200px;padding-left:10px;padding-right:10px;margin:0 auto;padding-top:10px;padding-bottom:10px;position:relative}  .mcook a{color:#1893ed}  .mcook a:hover{text-decoration:none}  .mcook__close{position:absolute;right:-2px;top:0;transition:.3s;cursor:pointer}  .mcook__close svg{transition:.2s}  .mcook__close:hover svg{transform:rotate(90deg)}  .mcook__close svg{width:7px;height:7px}</style>
+<style>.mcook{z-index:1000;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;background-color: rgba(255, 254, 254, 0.86);display:flex;align-items:center;opacity:0;visibility:hidden;transform:translatey(100%);position:fixed;bottom:0;left:0;right:0;transition:.2s}  .mcook.mvisible{opacity:1;visibility:visible;transform:none}  .mcook__container{max-width:1200px;padding-left:10px;padding-right:10px;margin:0 auto;padding-top:10px;padding-bottom:10px;position:relative}  .mcook a{color:#1893ed}  .mcook a:hover{text-decoration:none}  .mcook__close{position:absolute;right:-2px;top:0;transition:.3s;cursor:pointer}  .mcook__close svg{transition:.2s}  .mcook__close:hover svg{transform:rotate(90deg)}  .mcook__close svg{width:7px;height:7px}</style>
 <div class="mcook mvisible">
     <div class="mcook__container">
         <div class="mcook__text">
