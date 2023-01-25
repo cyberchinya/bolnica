@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('ourdoctors', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('desk')->nullable();
-            $table->text('content');
+            $table->string('title')->nullable();
+            $table->text('desk')->nullable();
+            $table->longText('content');
             $table->text('image')->nullable();
             $table->text('document')->nullable();
             $table->boolean('is_published')->default(false);
